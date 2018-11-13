@@ -1,0 +1,23 @@
+<header class="main-header bg-dark">
+  <div class="container">
+    <div class="navbar d-flex">
+      {% if title == "Index page" %}
+      <div class="logo">
+        <img class="logo-img" src="img/logo.png" srcset="img/logo@2x.png 2x,
+                     img/logo@3x.png 3x">
+        <h1 class="logo-text">
+          Stay Alive: Survival
+        </h1>
+      </div>
+      {% else %}
+      <a class="logo" href="page.html">
+        <img class="logo-img" src="img/logo.png" srcset="img/logo@2x.png 2x,
+                          img/logo@3x.png 3x">
+        <h1 class="logo-text">
+          Stay Alive: Survival
+        </h1>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+</header>

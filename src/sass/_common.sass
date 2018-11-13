@@ -1,0 +1,538 @@
+
+img
+	display: inline-block
+	max-width: 100%
+	height: auto
+
+textarea
+	resize: none
+
+.form-control, .input-group-text
+	font-weight: 300
+
+.form-control, .input-group-text
+	+placeholder
+		font-weight: 300
+		color: rgba(51, 51, 51, .5)
+
+.form-control:disabled, 
+.form-control[readonly]
+	background-color: $white
+	border-color: $light
+
+.form-row
+	margin-left: -8px
+	margin-right: -8px
+
+.form-row>.col, .form-row>[class*=col-]
+    padding-right: 8px
+    padding-left: 8px
+
+.btn
+	color: $white
+	line-height: normal
+	box-shadow: 0 1px 2px 0 rgba(51, 51, 51, 0.6)
+	font-weight: bold
+
+.btn-primary:hover
+	border-color: #e09b09
+	color: $white
+	background-color: #e09b09
+	box-shadow: 0 1px 2px 0 rgba(51, 51, 51, 0.6)
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active:focus
+	background-color: #faac09
+	border-color: #faac09
+	box-shadow: 0 1px 2px 0 rgba(51, 51, 51, 0.6)
+
+
+.btn-info
+	padding-right: 1rem
+	padding-left: 1rem
+	box-shadow: none
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:not(:disabled):not(.disabled).active, 
+.btn-info:not(:disabled):not(.disabled):active
+	box-shadow: none
+	border-color: $white
+	background-color: $white
+
+.btn.disabled,
+.btn:disabled
+	color: $white
+	background-color: #d8d8d8
+	border-color: #d8d8d8
+	opacity: .6
+
+.btn-outline-primary
+	color: $dark
+	box-shadow: none
+
+.btn-outline-primary:hover
+	box-shadow: none
+
+.btn-outline-primary:focus,
+.btn-outline-primary:active
+	color: $white
+	box-shadow: none
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active
+	color: $white
+
+.btn-link
+	color: $dark
+	font-size: 30px
+	font-weight: bold
+	line-height: normal
+	text-decoration: none
+	box-shadow: none
+	position: relative
+	z-index: 2
+	padding: 0
+
+
+.btn-link:hover
+	text-decoration: none
+	background-color: transparent
+	color: $dark
+	border-color: transparent
+	box-shadow: none
+
+.btn-link:before,
+.btn-link:after
+	position: absolute
+	content: ''
+	width: 50%
+	height: 50%
+	background: transparent
+	z-index: 1
+	transition: $transition-base
+
+.btn-link:before
+	border-top: 2px solid $yellow
+	top: -2px
+	left: -2px
+
+.btn-link:after
+	border-bottom: 2px solid $yellow
+	right: -2px
+	bottom: -2px
+
+.btn-link:hover:before,
+.btn-link:hover:after
+	width: 100%
+
+.btn-dark
+	box-shadow: none
+	font-weight: 300
+	
+
+
+
+//header
+.main-header
+	padding: 13px 0
+	box-shadow: inset 0 -2px 0 0 rgba(35, 35, 35, 0.48)
+
+
+.logo
+	display: inline-block
+	text-decoration: none
+	margin-right: auto
+	+r($md)
+		margin-left: auto
+	&-img
+		margin-right: 16px
+		width: 70px
+		height: 70px
+		object-fit: contain
+		display: inline-block
+		vertical-align: middle
+	&-text
+		font-size: 16px
+		font-weight: bold
+		line-height: normal
+		display: inline-block
+		vertical-align: middle
+		color: $white
+		margin: 0
+	&:hover
+		text-decoration: none
+
+//hero
+.hero
+	background: url('../img/bg.jpg') no-repeat center center $light / cover
+	padding-top: 186px
+	padding-bottom: 186px
+	position: relative
+	+r($md)
+		padding: 100px 0
+	&-title
+		font-size: 48px
+		line-height: normal
+		color: $white
+		margin-bottom: 30px
+		text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5)
+		+r($md)
+			font-size: 24px
+			margin-bottom: 15px
+
+.input-search
+	height: 53px
+
+.input-search,
+.input-search:focus
+	border-color: $white
+
+.main-content ~ .main-footer
+	margin-top: 96px
+	+r($md)
+		margin-top: 48px
+
+//feedback
+.feedback
+	padding: 96px 0
+	+r($md)
+		padding: 48px 0
+	&-text
+		font-size: 28px
+		line-height: normal
+		font-weight: bold
+		color: #373a3d
+		+r($lg)
+			text-align: center
+		+r($md)
+			font-size: 22px
+	&-info
+		color: $dark
+		line-height: normal
+		font-weight: normal
+		font-size: 16px
+		+r($lg)
+			text-align: center
+
+//footer
+.main-footer
+	padding: 38px
+
+.copyright
+	color: #fff
+	font-weight: bold
+	font-size: 16px
+
+
+.ui-slide
+	width: 1170px
+	height: 658px
+	background: #ccc
+	border: 2px solid #fff
+
+//sect-title
+.sect-title
+	margin: 0
+	padding: 71px 0
+	position: relative
+	font-size: 48px
+	line-height: normal
+	font-weight: bold
+	+r($sm)
+		font-size: 24px
+		padding: 35px 0
+	&-text
+		position: relative
+		font-size: 1em
+		font-weight: bold
+		line-height: normal
+		z-index: 20
+	&-bg
+		color: $light-gray
+		font-size: (170em / 48)
+		line-height: normal
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 10
+		+r($sm)
+			display: none
+	&:before
+		position: absolute
+		content: ''
+		top: 0
+		bottom: 0
+		right: calc(100% + 32px)
+		margin: auto
+		height: 21px
+		width: 100%
+		background-color: $yellow
+		+r($sm)
+			right: initial
+			left: 0
+			top: initial
+			bottom: 10px
+			width: 20%
+			height: 10px
+
+.faq
+	margin-bottom: 66px
+	+r($md)
+		margin-bottom: 33px
+	&-item
+		margin-bottom: 30px
+	&-item-title
+		margin-bottom: 0
+		line-height: normal
+	&-item-link
+		font-size: 28px
+		line-height: normal
+		font-weight: bold
+		color: #373a3d
+		position: relative
+		text-decoration: none
+		display: inline-block
+		vertical-align: middle
+		white-space: nowrap
+		+r($xl)
+			font-size: 24px
+		+r($md)
+			font-size: 18px
+	&-item-link:hover
+		text-decoration: none
+		color: inherit
+	&-item-link:after
+		display: inline-block
+		vertical-align: middle
+		margin-left: 5px
+		content: ''
+		width: 12px
+		height: 12px
+		background-color: transparent
+		border-right: 3px solid $dark
+		border-top: 3px solid $dark
+		transform: rotate(45deg)
+		+r($md)
+			width: 8px
+			height: 8px
+	&-item-img
+		display: flex
+		justify-content: center
+		padding: 9px 0
+	&-item-img img
+		width: 130px
+		height: 130px
+		object-fit: contain
+
+.swiper-pagination-ui
+	+r($lg)
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	.btn:last-child
+		margin-right: 0 !important
+	.btn
+		+r($lg)
+			width: 45%
+			padding-right: 0
+			padding-left: 0
+
+.list
+	padding: 0
+	margin: 0
+	list-style: none
+	&-item
+		font-size: 16px
+		line-height: normal
+		margin-bottom: $spacer
+	&-item-link
+		font-size: 16px
+		text-decoration: none
+		color: $dark
+		font-weight: bold
+		line-height: normal
+		transition: $transition-base
+		+r($md)
+			font-weight: normal
+	&-item-link:hover
+		text-decoration: none
+		color: $yellow
+		
+//search-page
+.search
+	margin-bottom: 80px
+
+.navigation
+	padding: 48px 0
+	+r($md)
+		padding: 24px 0
+		flex-direction: column-reverse
+
+
+//breadcrumb
+.breadcrumb
+	font-size: 14px
+	line-height: normal
+	color: $dark
+	background-color: $white
+	padding: 0
+	margin: 0
+	&-item+.breadcrumb-item
+		padding-left: .3rem
+	&-item a
+		color: $dark
+		font-weight: 300	
+	&-item.active
+		font-weight: bold
+		color: $dark
+	&-item.active:before
+		content: '|'
+		color: $dark
+		padding-right: .3rem
+
+
+.article-content
+	margin-bottom: 96px
+	overflow: hidden
+	+r($md)
+		margin-bottom: 48px
+
+.article-descr
+	padding: 60px 100px
+	position: relative
+	height: 100%
+	z-index: 2
+
+.article-descr:after
+	position: absolute
+	content: ''
+	background-color: $light
+	width: 100%
+	height: 100%
+	right: 5px
+	top: 0
+	z-index: 1
+	transform: translateX(100%)
+
+//modal
+.modal
+	&-dialog
+		+rmin($sm)
+			margin-top: 83px
+			margin-bottom: 48px 
+	&-content
+		position: relative
+		padding: 48px 70px
+		border: none
+		box-shadow: 0 2px 4px 0 rgba(155, 155, 155, .5)
+		+r($md)
+			padding: 48px 30px
+		+r($sm)
+			padding: 42px 16px
+	&-content label
+		font-weight: bold
+		line-height: normal
+		width: 100%
+	&-content .form-group
+		margin-bottom: 1.5rem
+	&-content .close
+		position: absolute
+		right: -60px
+		top: -60px
+		background-color: transparent
+		border: none
+		cursor: pointer
+		+r($md)
+			top: 15px
+			right: 15px
+	&-content .close .icon-close
+		+r($md)
+			fill: $dark
+		+r($sm)
+			width: 30px
+			height: 30px
+	&-content .close:focus
+		outline: none
+	&-header
+		border-bottom: none
+		flex-wrap: wrap
+		padding: 0
+	&-title
+		display: block
+		width: 100%
+		font-size: 30px
+		font-weight: bold
+		line-height: normal
+		+r($sm)
+			font-size: 24px
+	&-subtitle
+		width: 100%
+		display: block
+		font-weight: bold
+		+r($sm)
+			font-weight: normal
+	&-body
+		padding: 0
+	&-footer
+		padding: 0
+		border: none
+	&-backdrop
+		background-color: rgb(51, 51, 51)
+	&-backdrop.show
+		opacity: .65
+
+.id-label
+	position: relative
+
+.id-info
+	border: none
+	position: absolute
+	right: 0
+	top: 0
+	bottom: 0
+	margin: auto
+	display: inline-block
+	vertical-align: middle
+	text-align: center
+	font-size: 16px
+	line-height: 24px
+	width: 24px
+	height: 24px
+	color: $white
+	background-color: $yellow
+	border-radius: 50%
+	cursor: pointer
+
+.id-info:focus
+	outline: none
+
+.tooltip
+	font-size: 16px
+	font-weight: 300
+	line-height: normal
+	&-inner
+		max-width: 360px
+		padding: 20px 25px
+		background-color: $dark
+		color: $white
+		text-align: left
+	.arrow
+		opacity: 1
+
+.tooltip.show
+	opacity: 1
+	
+
+	
+
+
+		
+		
+
+
+
+
+

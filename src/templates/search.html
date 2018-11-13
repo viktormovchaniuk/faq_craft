@@ -1,0 +1,55 @@
+---
+title: Search page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{# partial example #}
+
+{% include "partials/_header.html" %}
+{% include "partials/_hero.html" %}
+
+<section class=search>
+  <div class="container">
+
+    <div class="navigation d-flex justfy-content-between align-items-center">
+      <span class="search-count">Найдено 6 совпадений</span>
+      <a href="page.html" class="btn btn-link ml-0 ml-md-auto mb-2 mb-md-0">Назад</a>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <ul class="list">
+          <li class="list-item">
+            <a class="list-item-link" href="#">Какова цель игры?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как я повышу уровень?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Зачем отстраивать корабль?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как передвигаться между островами?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как определить какой остров “опасный”?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как попасть в тайную пещеру аборигенов?</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+{% include "partials/_feedback.html" %}
+{% include "partials/_footer.html" %}
+
+
+
+
+{% endblock %}

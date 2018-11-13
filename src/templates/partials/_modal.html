@@ -1,0 +1,53 @@
+<div class="modal fade" id="mainModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" style="display: block" role="document">
+    <div class="modal-content">
+      <form action="#">
+        <div class="modal-header mb-2 mb-md-5">
+          <h5 class="modal-title text-center mb-1">Оставьте сообщение</h5>
+          <b class="modal-subtitle text-center">мы ответим вам в ближайшее время</b>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">{{mixins.icon('close')}}</span>
+          </button>
+        </div>
+        <div class="modal-body mb-5">
+          <div class="form-group">
+            <label for="form-select">Платформа</label>
+            <select class="form-control" id="form-select">
+              <option>Android</option>
+              <option>iOS</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="form-name">Имя</label>
+            <input type="text" class="form-control" id="form-name" placeholder="Введите имя здесь">
+          </div>
+          <div class="form-group">
+            <label for="form-mail">Email</label>
+            <input type="email" class="form-control" id="form-mail" placeholder="Введите email здесь">
+          </div>
+          <div class="form-group">
+            <label class="id-label" for="form-user-id">User ID <button type="button" data-placement="right" title="Ваш ID можно найти и скопировать в меню настроек игры. Для этого откройте меню игры, найдите вкладку “Настройки” и увидите окно с вашим идентификатором. Кликнув на иконку рядом с ним вы копируете его в буфер обмена девайса."
+                data-toggle="tooltip" class="id-info">?</button></label>
+            <input type="email" class="form-control" id="form-user-id" placeholder="Введите ID здесь">
+          </div>
+          <div class="form-group">
+            <label for="form-textarea">Опишите вашу проблему</label>
+            <textarea class="form-control" id="form-textarea" rows="6" placeholder="Введите текст здесь"></textarea>
+          </div>
+          <div class="form-row">
+            <div class="col-5">
+              <label class="btn btn-dark btn-block btn-sm mb-0 pr-0 pl-0" for="form-file">Выбрать</label>
+              <input style="display: none" type="file" id="form-file" multiple>
+            </div>
+            <div class="col-7">
+              <input type="text" readonly value="Нет файлов" class="form-control" id="inputGroupFile03">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-block btn-primary">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

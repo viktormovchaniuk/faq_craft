@@ -1,0 +1,99 @@
+---
+title: Article page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{# variable example #}
+
+
+
+{# partial example #}
+{% include "partials/_header.html" %}
+{% import "partials/_sect-title.html" as titles %}
+
+
+<section class="article-content">
+  <div class="container">
+    <div class="navigation d-flex justfy-content-between align-items-center">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="page.html">F.A.Q</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Общий игровой процесс</li>
+        </ol>
+      </nav>
+      <a href="page.html" class="btn btn-link ml-0 ml-md-auto mb-2 mb-md-0">Назад</a>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        {{ titles.title('Общий игровой процесс' , 'F.A.Q.') }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <ul class="list">
+          <li class="list-item">
+            <a class="list-item-link" href="#">Какова цель игры?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как я повышу уровень?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Зачем отстраивать корабль?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как передвигаться между островами?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как определить какой остров “опасный”?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как попасть в тайную пещеру аборигенов?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Где взять маски аборигенов?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Как попасть в Заброшенный Храм аборигенов?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Где взять ключи для входа в тайную комнату?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Зачем отстраивать мосты?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Где искать ценный лут?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Что такое сюжетный квест?</a>
+          </li>
+          <li class="list-item">
+            <a class="list-item-link" href="#">Где искать сюжетные записки?</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-8">
+        <div class="article-descr bg-light">
+          <p class="article-descr-text mb-0">Корабль должен стать твоим основным домом в игре. На нем ты сможешь, жить,
+            строить
+            необходимые
+            для крафта
+            станки,
+            сохранять лут и материалы, и путешествовать по дальним архипелагам, на которые на шлюпке не доберешся.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "partials/_feedback.html" %}
+{% include "partials/_footer.html" %}
+
+
+
+
+{% endblock %}

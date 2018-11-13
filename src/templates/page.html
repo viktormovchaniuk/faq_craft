@@ -1,0 +1,256 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+{# partial example #}
+{% import "partials/_sect-title.html" as titles %}
+{% include "partials/_header.html" %}
+{% include "partials/_hero.html" %}
+
+<main class="main-content mb-2 mb-md-5">
+  <section class="faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          {{ titles.title('Часто Задаваемые Вопросы' , 'F.A.Q') }}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="faq-item">
+            <h3 class="faq-item-title mb-2">
+              <a href="article.html" class="faq-item-link">Общий игровой процесс</a>
+            </h3>
+            <div class="faq-item-img bg-light mb-2">
+              <img width="130" height="130" alt="game procces" src="img/faq-1.svg">
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <a class="list-item-link" href="#">Какова цель игры?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как я повышу уровень?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Зачем отстраивать корабль?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как передвигаться между островами?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как определить какой остров “опасный”?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как попасть в тайную пещеру аборигенов?</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="faq-item">
+            <h3 class="faq-item-title mb-2">
+              <a href="article.html" class="faq-item-link">Начало игры</a>
+            </h3>
+            <div class="faq-item-img bg-light mb-2">
+              <img width="130" height="130" alt="game procces" src="img/faq-2.svg">
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <a class="list-item-link" href="#">Что нужно делать в игре?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как построить свою базу?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Зачем отстраивать шлюпку?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Где я могу размещать станки для производства сложных предметов?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Где я могу размещать сундуки для хранения ресурсов?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Где мне взять ресурсы для крафта и строительства?</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="faq-item">
+            <h3 class="faq-item-title mb-2">
+              <a href="article.html" class="faq-item-link">Моя учетная запись</a>
+            </h3>
+            <div class="faq-item-img bg-light mb-2">
+              <img width="130" height="130" alt="game procces" src="img/faq-3.svg">
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как привязать свой аккаунт к Google Play?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Я потерял свой прогресс. Что делать?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как избежать потери прогресса?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Не получается играть на нескольких устройствах одновременно.</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Не могу восстановить прогресс!</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как начать игру заново?</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="faq-item">
+            <h3 class="faq-item-title mb-2">
+              <a href="article.html" class="faq-item-link">Платежи и ресурсы</a>
+            </h3>
+            <div class="faq-item-img bg-light mb-2">
+              <img width="130" height="130" alt="game procces" src="img/faq-4.svg">
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <a class="list-item-link" href="#">У меня пропали ресурсы!</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Мне не пришли покупки!</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Где найти ID платежа?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Пропали купленные вещи после смерти!</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Не получается совершить покупку!</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как оформить возврат платежа?</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="faq-item">
+            <h3 class="faq-item-title mb-2">
+              <a href="article.html" class="faq-item-link">Устранение неполадок</a>
+            </h3>
+            <div class="faq-item-img bg-light mb-2">
+              <img width="130" height="130" alt="game procces" src="img/faq-5.svg">
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <a class="list-item-link" href="#">Игра не грузится.</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Игра вылетает.</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">При загрузке или обновлении игры через Play Market появляется
+                  ошибка с кодом.</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Нашел в игре баг. Кому об этом написать?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">У меня стоит последняя версия, но при входе появляется
+                  сообщение, что игру
+                  необходимо обновить.</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Какие минимальные системные требования у игры?</a>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <article class="faq-item">
+            <h3 class="faq-item-title mb-2">
+              <a href="article.html" class="faq-item-link">Обновления</a>
+            </h3>
+            <div class="faq-item-img bg-light mb-2">
+              <img width="130" height="130" alt="game procces" src="img/faq-6.svg">
+            </div>
+            <ul class="list">
+              <li class="list-item">
+                <a class="list-item-link" href="#">Как часто выходят обновление?</a>
+              </li>
+              <li class="list-item">
+                <a class="list-item-link" href="#">Кому можно отправить идеи для будущих обновлений?</a>
+              </li>
+
+            </ul>
+          </article>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+</main>
+
+{% include "partials/_feedback.html" %}
+
+<section class="ui">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-12">
+        {{ titles.title('Пользовательский интерфейс' , 'U.I') }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- If we need pagination -->
+          <div class="swiper-pagination-ui mb-1 mb-md-5" data-btns="Main Menu, Craft Menu, Inventory Menu, Quest Menu"></div>
+          <!-- Additional required wrapper -->
+          <div class="
+            swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="ui-slide">
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ui-slide">
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ui-slide">
+
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="ui-slide">
+
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% include "partials/_footer.html" %}
+
+
+
+
+{% endblock %}

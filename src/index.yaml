@@ -1,0 +1,5 @@
+ProjectTitle: faq-craft
+
+PageList:
+- file: page.html
+  ready: 50
