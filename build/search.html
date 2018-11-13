@@ -30,7 +30,7 @@
             <h2 class="hero-title text-center">Чем мы сможем вам помочь?</h2>
             <form action="#">
               <div class="input-group">
-                <input type="text" class="form-control input-search" placeholder="Напишите здесь свой вопрос…">
+                <input id="inputSearch" type="text" class="form-control input-search" placeholder="Напишите здесь свой вопрос…">
                 <div class="input-group-append">
                   <button class="btn btn-info" type="submit">
                     <svg class="icon icon-glass">
@@ -47,12 +47,12 @@
     <section class=search>
       <div class="container">
         <div class="navigation d-flex justfy-content-between align-items-center">
-          <span class="search-count">Найдено 6 совпадений</span>
+          <span id="searchCount" class="search-count">Найдено 6 совпадений</span>
           <a href="page.html" class="btn btn-link ml-0 ml-md-auto mb-2 mb-md-0">Назад</a>
         </div>
         <div class="row">
           <div class="col-12">
-            <ul class="list">
+            <ul id="searchList" class="list">
               <li class="list-item">
                 <a class="list-item-link" href="#">Какова цель игры?</a>
               </li>
@@ -138,11 +138,11 @@
               </div>
               <div class="form-row">
                 <div class="col-5">
-                  <label class="btn btn-dark btn-block btn-sm mb-0 pr-0 pl-0" for="form-file">Выбрать</label>
-                  <input style="display: none" type="file" id="form-file" multiple>
+                  <label class="btn btn-dark btn-block btn-sm mb-0 pr-0 pl-0" for="formFile">Выбрать</label>
+                  <input id="formFile" style="display: none" type="file" multiple>
                 </div>
                 <div class="col-7">
-                  <input type="text" readonly value="Нет файлов" class="form-control" id="inputGroupFile03">
+                  <input id="inputFilename" type="text" readonly value="Нет файлов" class="form-control">
                 </div>
               </div>
             </div>

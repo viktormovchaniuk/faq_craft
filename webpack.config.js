@@ -26,6 +26,9 @@ function createConfig(env) {
       filename: '[name].js',
       publicPath: 'js/',
     },
+    devServer: {
+      overlay: true,
+    },
     devtool: isProduction ?
       '#source-map' :
       '#cheap-module-eval-source-map',
@@ -44,8 +47,9 @@ function createConfig(env) {
       }),
       new webpack.ProvidePlugin({
         $: 'jquery',
-        jQuery: 'jquery',
+        jQuery: ['jquery', 'default'],
         'window.jQuery': 'jquery',
+        // Popper: ['popper.js', 'default']
       }),
       new webpack.NoEmitOnErrorsPlugin(),
 
@@ -67,6 +71,9 @@ function createConfig(env) {
         'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'),
       },
     },
+    optimization :{
+      minimize: isProduction
+    },
     module: {
       rules: [
         {
@@ -87,6 +94,10 @@ function createConfig(env) {
           exclude: [
             path.resolve(__dirname, 'node_modules'),
           ],
+        },
+        {
+            test: /\.glsl$/,
+            loader: 'webpack-glsl-loader'
         }],
     },
   };
@@ -95,11 +106,6 @@ function createConfig(env) {
     webpackConfig.plugins.push(
       new webpack.LoaderOptionsPlugin({
         minimize: true,
-      }),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: false,
-        },
       })
     );
   }

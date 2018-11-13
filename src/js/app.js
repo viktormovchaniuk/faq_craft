@@ -29,3 +29,37 @@ $('#mainModal').on('shown.bs.modal', function() {
 $(function() {
   $('[data-toggle="tooltip"]').tooltip();
 });
+
+$('#formFile').on('change',function(){
+  let fileNames = [];
+  let files = this.files;
+  for (let i = 0; i < files.length; i++) {
+    fileNames.push(files[i].name)
+  }
+  $('#inputFilename').val(fileNames.map(i => ' ' + i ));
+});
+
+var arr = $('.list-item');
+var newArr = [];
+
+$('#inputSearch').keyup(test);
+
+function test() {
+  var currentValue = $(this).val().toLowerCase();
+  newArr = arr.filter((index, item) => {
+    return $(item).text().toLowerCase().indexOf(currentValue) !== -1;
+  });
+  
+  $('#searchList').html(newArr);
+  $('#searchCount').html('Найдено ' + newArr.length + ' совпадений');
+}
+
+
+
+
+ 
+ 
+
+
+
+

@@ -8,14 +8,4 @@
         5743E396-F31B-4AB1-B73B-6A85E3D47FDA
     </title>
     <path d="M19.755 18.58l-4.808-4.809A8.431 8.431 0 0 0 8.429 0 8.428 8.428 0 0 0 0 8.429a8.428 8.428 0 0 0 8.429 8.428 8.384 8.384 0 0 0 5.338-1.906l4.809 4.804a.833.833 0 0 0 1.18-1.175zM8.43 15.18c-3.727 0-6.756-3.029-6.756-6.751A6.763 6.763 0 0 1 8.43 1.673c3.722 0 6.755 3.033 6.755 6.756 0 3.722-3.033 6.75-6.755 6.75z" fill-rule="nonzero"/>
-</symbol><symbol id="icon-info-copy" viewBox="0 0 24 24">
-    <title>
-        F9C6546D-C0B1-4834-8C96-A58EC30343CB
-    </title>
-    <g fill-rule="evenodd">
-        <circle cx="12" cy="12" r="12"/>
-        <text font-family="Roboto-Bold, Roboto" font-size="16" font-weight="bold">
-            <tspan x="8" y="18">?</tspan>
-        </text>
-    </g>
 </symbol></svg>
