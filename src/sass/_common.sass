@@ -80,6 +80,9 @@ textarea
 	color: $white
 	box-shadow: none
 
+.btn-outline-primary:focus
+	color: $dark
+
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active
 	color: $white
@@ -96,7 +99,8 @@ textarea
 	padding: 0
 
 
-.btn-link:hover
+.btn-link:hover,
+.btn-link:focus
 	text-decoration: none
 	background-color: transparent
 	color: $dark
@@ -228,7 +232,7 @@ textarea
 
 
 .ui-slide
-	width: 1170px
+	width: 1110px
 	height: 658px
 	background: #ccc
 	border: 2px solid #fff
@@ -349,6 +353,8 @@ textarea
 		font-size: 16px
 		line-height: normal
 		margin-bottom: $spacer
+	&-item.active .list-item-link
+		color: $yellow
 	&-item-link
 		font-size: 16px
 		text-decoration: none
@@ -381,7 +387,7 @@ textarea
 	background-color: $white
 	padding: 0
 	margin: 0
-	&-item+.breadcrumb-item
+	&-item + .breadcrumb-item
 		padding-left: .3rem
 	&-item a
 		color: $dark
@@ -401,13 +407,30 @@ textarea
 	+r($md)
 		margin-bottom: 48px
 
-.article-descr
-	padding: 60px 100px
+.custom-tabs
 	position: relative
 	height: 100%
 	z-index: 2
+	background-color: $light
+	+r($lg)
+		background-color: $white
+	.list-item-link
+		display: none
+		+r($lg)
+			display: block
+			padding: 16px 25px
+			font-size: 18px
+			text-align: center
+			border: 2px solid $light
+			font-weight: bold
 
-.article-descr:after
+.custom-tabs > .tab-pane
+	display: none
+
+.custom-tabs > .tab-pane.active
+	display: block
+
+.custom-tabs:after
 	position: absolute
 	content: ''
 	background-color: $light
@@ -417,6 +440,14 @@ textarea
 	top: 0
 	z-index: 1
 	transform: translateX(100%)
+	+r($lg)
+		display: none
+
+.custom-tabs-item
+	padding: 60px 100px
+	+r($lg)
+		background-color: $light
+		padding: 15px 25px
 
 //modal
 .modal

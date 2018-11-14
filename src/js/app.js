@@ -1,9 +1,11 @@
 import Swiper from './lib/swiper.js';
+import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/modal';
 import 'bootstrap/js/dist/tooltip';
 
 var swiperUi = new Swiper('.swiper-container', {
   slidesPerView: 1,
+  effect: 'coverflow',
   pagination: {
     el: '.swiper-pagination-ui',
     clickable: true,
@@ -30,36 +32,73 @@ $(function() {
   $('[data-toggle="tooltip"]').tooltip();
 });
 
-$('#formFile').on('change',function(){
+const initialInputVal = $('#inputFilename').val();
+
+$('#formFile').on('change', function() {
   let fileNames = [];
   let files = this.files;
+
   for (let i = 0; i < files.length; i++) {
-    fileNames.push(files[i].name)
+    fileNames.push(files[i].name);
   }
-  $('#inputFilename').val(fileNames.map(i => ' ' + i ));
+  fileNames = files.length > 0 ? fileNames.map(i => ' ' + i) : initialInputVal;
+  $('#inputFilename').val(fileNames);
 });
 
-var arr = $('.list-item');
-var newArr = [];
+let arr = $('.list-item');
+let newArr = [];
 
 $('#inputSearch').keyup(test);
 
 function test() {
-  var currentValue = $(this).val().toLowerCase();
+  let currentValue = $(this)
+    .val()
+    .toLowerCase();
   newArr = arr.filter((index, item) => {
-    return $(item).text().toLowerCase().indexOf(currentValue) !== -1;
+    return (
+      $(item)
+        .text()
+        .toLowerCase()
+        .indexOf(currentValue) !== -1
+    );
   });
-  
+
+  let newArrLength = newArr.length;
+
   $('#searchList').html(newArr);
-  $('#searchCount').html('Найдено ' + newArr.length + ' совпадений');
+
+  $('#searchCount').html('Найдено совпадений: ' + newArrLength);
 }
 
+$('#articleTabs a').on('click', function(e) {
+  e.preventDefault();
+  $('#articleTabs li').removeClass('active');
+  $(this)
+    .parent()
+    .addClass('active');
+  let target = $(this).attr('href');
 
+  $('.custom-tabs .tab-pane').removeClass('show active');
 
+  $(target).addClass('active');
+  setTimeout(function() {
+    $(target).addClass('show');
+  }, 100);
+});
 
- 
- 
+$('#accordion a').on('click', function(e) {
+  e.preventDefault();
 
+  $('#accordion a').removeClass('active');
+  $(this).addClass('active');
 
+  let target = $(this).attr('href');
+  $('#accordion .tab-pane')
+    .slideUp()
+    .removeClass('show active');
+  // .slideToggle('active');
 
-
+  $(target)
+    .addClass('show')
+    .slideToggle('active');
+});
