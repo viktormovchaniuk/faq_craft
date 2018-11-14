@@ -5,7 +5,6 @@ import 'bootstrap/js/dist/tooltip';
 
 var swiperUi = new Swiper('.swiper-container', {
   slidesPerView: 1,
-  effect: 'coverflow',
   pagination: {
     el: '.swiper-pagination-ui',
     clickable: true,
