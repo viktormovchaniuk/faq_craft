@@ -369,6 +369,7 @@ $slide-height: 624
 	opacity: .3
 	filter: blur(7px)
 	background-color: $yellow
+	// box-shadow: 0 0 0 25px rgba($yellow, 1)
 	cursor: pointer
 	right: 0
 	bottom: 0
@@ -389,7 +390,7 @@ $slide-height: 624
 	outline: none
 
 .ui-element.active
-	animation: bounce .4s, shadowpulse 2s infinite
+	// animation: bounce .4s, shadowpulse 2s infinite
 	opacity: .8
 
 =make-el($width, $height, $left, $top)
@@ -428,21 +429,27 @@ $slide-height: 624
 		
 .swiper-pagination-nested-2
 	.ui-element-1
-		+make-el(110, 110, 130, 525)
+		+make-el(150, 70, 110, 547)
+		border-radius: 10px
 	.ui-element-2
-		+make-el(110, 110, 275, 525)
+		+make-el(150, 70, 255, 547)
+		border-radius: 10px
 	.ui-element-3
-		+make-el(110, 110, 425, 525)
+		+make-el(150, 70, 405, 547)
+		border-radius: 10px
 	.ui-element-4
 		+make-el(70, 70, 548, 548)
 	.ui-element-5
 		border-radius: 10px
 		+make-el(370, 65, 630, 548)
 	.ui-element-6
+		border-radius: 10px
 		+make-el(92, 92, 632, 389)
 	.ui-element-7
+		border-radius: 10px
 		+make-el(92, 92, 632, 295)
 	.ui-element-8
+		border-radius: 10px
 		+make-el(92, 92, 632, 202)
 	.ui-element-9
 		border-radius: 10px
@@ -450,9 +457,11 @@ $slide-height: 624
 
 .swiper-pagination-nested-3
 	.ui-element-1
-		+make-el(145, 145, 100, 70)
+		border-radius: 10px
+		+make-el(140, 145, 105, 70)
 	.ui-element-2
-		+make-el(320, 320, 700, 10)
+		border-radius: 10px
+		+make-el(300, 340, 715, 10)
 	.ui-element-3
 		border-radius: 10px
 		+make-el(290, 100, 713, 353)
@@ -519,8 +528,6 @@ $slide-height: 624
 		margin-bottom: 33px
 	&-item
 		margin-bottom: 30px
-		.list-item-link
-			font-weight: normal
 	&-item-title
 		margin-bottom: 0
 		line-height: normal
@@ -598,7 +605,9 @@ $slide-height: 624
 		text-decoration: none
 		color: $yellow
 
-
+.faq-item .list-item-link
+	+r($md)
+		font-weight: normal
 		
 //search-page
 .search
@@ -640,47 +649,32 @@ $slide-height: 624
 	+r($md)
 		margin-bottom: 48px
 
-.custom-tabs
+.tabs
+	.list-item-link.active
+		color: $yellow
+
+.tab-content
+	height: 100%
 	position: relative
-	height: 100%
-	z-index: 2
-	background-color: $light
-	+r($lg)
-		background-color: $white
-	.list-item-link
-		display: none
-		+r($lg)
-			display: block
-			padding: 16px 25px
-			font-size: 18px
-			text-align: center
-			border: 2px solid $light
-			font-weight: bold
-
-.custom-tabs > .tab-pane
-	display: none
-
-.custom-tabs > .tab-pane.active
-	display: block
-
-.custom-tabs:after
-	position: absolute
-	content: ''
-	background-color: $light
-	width: 100%
-	height: 100%
-	right: 5px
-	top: 0
-	z-index: 1
-	transform: translateX(100%)
-	+r($lg)
-		display: none
-
-.custom-tabs-item
 	padding: 60px 100px
-	+r($lg)
+	&:after
+		position: absolute
+		content: ''
+		top: 0
+		bottom: 0
+		width: 100%
+		right: -95%
 		background-color: $light
+
+.accordion
+	text-align: center
+	.list-item-link
+		padding: .5rem 1rem
+		display: block
+		border: 2px solid $light
+	&-item-text p
 		padding: 15px 25px
+		background-color: $light
 
 //modal
 .modal

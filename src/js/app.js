@@ -8,6 +8,8 @@ import {
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/modal';
 import 'bootstrap/js/dist/tooltip';
+import 'bootstrap/js/dist/tab';
+import 'bootstrap/js/dist/collapse';
 
 Swiper.use([Navigation, Pagination, EffectCoverflow]);
 
@@ -114,9 +116,9 @@ $('#formFile').on('change', function() {
 let arr = $('.list-item');
 let newArr = [];
 
-$('#inputSearch').keyup(test);
+$('#inputSearch').keyup(check);
 
-function test() {
+function check() {
   let currentValue = $(this)
     .val()
     .toLowerCase();
@@ -138,33 +140,7 @@ function test() {
 
 $('#articleTabs a').on('click', function(e) {
   e.preventDefault();
-  $('#articleTabs li').removeClass('active');
-  $(this)
-    .parent()
-    .addClass('active');
-  let target = $(this).attr('href');
-
-  $('.custom-tabs .tab-pane').removeClass('show active');
-
-  $(target).addClass('active');
-  setTimeout(function() {
-    $(target).addClass('show');
-  }, 100);
+  $(this).tab('show');
 });
 
-$('#accordion a').on('click', function(e) {
-  e.preventDefault();
-
-  $('#accordion a').removeClass('active');
-  $(this).addClass('active');
-
-  let target = $(this).attr('href');
-  $('#accordion .tab-pane')
-    .slideUp()
-    .removeClass('show active');
-  // .slideToggle('active');
-
-  $(target)
-    .addClass('show')
-    .slideToggle('active');
-});
+// $('#accordion').collapse();

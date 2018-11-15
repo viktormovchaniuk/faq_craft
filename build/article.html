@@ -42,17 +42,17 @@
             </h2>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-4 d-none d-lg-block">
-            <ul id="articleTabs" class="list">
+        <div class="row d-none d-lg-flex">
+          <div class="col-lg-4">
+            <ul id="articleTabs" class="nav tabs flex-column list" role="tablist">
               <li class="list-item">
                 <a class="list-item-link" href="#tab-1">Какова цель игры?</a>
               </li>
               <li class="list-item">
                 <a class="list-item-link" href="#tab-2">Как я повышу уровень?</a>
               </li>
-              <li class="list-item active">
-                <a class="list-item-link" href="#tab-3">Зачем отстраивать корабль?</a>
+              <li class="list-item">
+                <a class="list-item-link active" href="#tab-3">Зачем отстраивать корабль?</a>
               </li>
               <li class="list-item">
                 <a class="list-item-link" href="#tab-4">Как передвигаться между островами?</a>
@@ -86,84 +86,155 @@
               </li>
             </ul>
           </div>
-          <div class="col-12 col-lg-8">
-            <div id="accordion" class="custom-tabs">
-              <a class="list-item-link active" href="#tab-1">Какова цель игры?</a>
-              <div class="tab-pane fade show active" id="tab-1">
+          <div class="col-lg-8">
+            <div id="tabContent" class="tab-content bg-light" role="tabpanel">
+              <div class="tab-pane fade" id="tab-1">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel recusandae molestias voluptas quam quaerat, eum corrupti! Fugiat magnam placeat fuga?</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-2">Как я повышу уровень?</a>
               <div class="tab-pane fade" id="tab-2">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, similique?</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-3">Зачем отстраивать корабль?</a>
-              <div class="tab-pane fade" id="tab-3">
+              <div class="tab-pane fade show active" id="tab-3">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, aliquam quia dignissimos eveniet necessitatibus ratione molestias beatae! Eum, deserunt veniam?</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-4">Как передвигаться между островами?</a>
               <div class="tab-pane fade" id="tab-4">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis!</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-5">Как определить какой остров “опасный”?</a>
               <div class="tab-pane fade" id="tab-5">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem reprehenderit odio?</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-6">Как попасть в тайную пещеру аборигенов?</a>
               <div class="tab-pane fade" id="tab-6">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis!</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-7">Где взять маски аборигенов?</a>
               <div class="tab-pane fade" id="tab-7">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem reprehenderit odio?</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-8">Как попасть в Заброшенный Храм аборигенов?</a>
               <div class="tab-pane fade" id="tab-8">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis!</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-9">Где взять ключи для входа в тайную комнату?</a>
               <div class="tab-pane fade" id="tab-9">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem reprehenderit odio?</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-10">Зачем отстраивать мосты?</a>
               <div class="tab-pane fade" id="tab-10">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis!</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-11">Где искать ценный лут?</a>
               <div class="tab-pane fade" id="tab-11">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem reprehenderit odio?</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-12">Что такое сюжетный квест?</a>
               <div class="tab-pane fade" id="tab-12">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam, ad!</p>
                 </div>
               </div>
-              <a class="list-item-link" href="#tab-13">Где искать сюжетные записки?</a>
               <div class="tab-pane fade" id="tab-13">
                 <div class="custom-tabs-item">
                   <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quidem reprehenderit odio?</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex d-lg-none">
+          <div class="col-12">
+            <div class="accordion" id="accordion">
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-1">Какова цель игры?</a>
+                <div class="accordion-item-text collapse" id="accordion-1" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel recusandae molestias voluptas quam quaerat, eum corrupti! Fugiat magnam placeat fuga? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-2">Как я повышу уровень?</a>
+                <div class="accordion-item-text collapse" id="accordion-2" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, similique? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-3">Зачем отстраивать корабль?</a>
+                <div class="accordion-item-text collapse show" id="accordion-3" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, aliquam quia dignissimos eveniet necessitatibus ratione molestias beatae! Eum, deserunt veniam? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-4">Как передвигаться между островами?</a>
+                <div class="accordion-item-text collapse" id="accordion-4" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis! </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-5">Как определить какой остров “опасный”?</a>
+                <div class="accordion-item-text collapse" id="accordion-5" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel recusandae molestias voluptas quam quaerat, eum corrupti! Fugiat magnam placeat fuga? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-6">Как попасть в тайную пещеру аборигенов?</a>
+                <div class="accordion-item-text collapse" id="accordion-6" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, similique? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-7">Где взять маски аборигенов?</a>
+                <div class="accordion-item-text collapse" id="accordion-7" data-parent="#accordion">
+                  <p class="mb-0"> Где взять маски аборигенов? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-8">Как попасть в Заброшенный Храм аборигенов?</a>
+                <div class="accordion-item-text collapse" id="accordion-8" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis! </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-9">Где взять ключи для входа в тайную комнату?</a>
+                <div class="accordion-item-text collapse" id="accordion-9" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel recusandae molestias voluptas quam quaerat, eum corrupti! Fugiat magnam placeat fuga? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-10">Зачем отстраивать мосты?</a>
+                <div class="accordion-item-text collapse" id="accordion-10" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, similique? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-11">Где искать ценный лут?</a>
+                <div class="accordion-item-text collapse" id="accordion-11" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis, aliquam quia dignissimos eveniet necessitatibus ratione molestias beatae! Eum, deserunt veniam? </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-12">Что такое сюжетный квест?</a>
+                <div class="accordion-item-text collapse" id="accordion-12" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis! </p>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <a class="list-item-link" href="#" data-toggle="collapse" data-target="#accordion-13">Где искать сюжетные записки?</a>
+                <div class="accordion-item-text collapse" id="accordion-13" data-parent="#accordion">
+                  <p class="mb-0"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit repellat minima iure vel sunt ipsam sequi quaerat modi rem, ab possimus expedita eius in corporis! </p>
                 </div>
               </div>
             </div>
