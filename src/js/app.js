@@ -1,10 +1,20 @@
-import Swiper from './lib/swiper.js';
+import {
+  Swiper,
+  Navigation,
+  Pagination,
+  EffectCoverflow
+} from 'swiper/dist/js/swiper.esm.js';
+
 import 'bootstrap/js/dist/util';
 import 'bootstrap/js/dist/modal';
 import 'bootstrap/js/dist/tooltip';
 
-var swiperUi = new Swiper('.swiper-container', {
+Swiper.use([Navigation, Pagination, EffectCoverflow]);
+
+var swiperUi = new Swiper('.swiper-container-h', {
   slidesPerView: 1,
+  simulateTouch: false,
+  effect: 'coverflow',
   pagination: {
     el: '.swiper-pagination-ui',
     clickable: true,
@@ -20,6 +30,63 @@ var swiperUi = new Swiper('.swiper-container', {
         '</button>'
       );
     }
+  }
+});
+
+var swiperNested1 = new Swiper('.swiper-container-nested-1', {
+  slidesPerView: 1,
+  simulateTouch: false,
+  autoHeight: true,
+  pagination: {
+    el: '.swiper-pagination-nested-1',
+    clickable: true,
+    bulletClass: 'ui-element',
+    bulletActiveClass: 'active',
+    renderBullet: function(index, className) {
+      return `<span class="${className} ${className}-${index + 1}"></span>`;
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-nested-next',
+    prevEl: '.swiper-nested-prev'
+  }
+});
+
+var swiperNested2 = new Swiper('.swiper-container-nested-2', {
+  slidesPerView: 1,
+  simulateTouch: false,
+  autoHeight: true,
+  pagination: {
+    el: '.swiper-pagination-nested-2',
+    clickable: true,
+    bulletClass: 'ui-element',
+    bulletActiveClass: 'active',
+    renderBullet: function(index, className) {
+      return `<span class="${className} ${className}-${index + 1}"></span>`;
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-nested-next',
+    prevEl: '.swiper-nested-prev'
+  }
+});
+
+var swiperNested3 = new Swiper('.swiper-container-nested-3', {
+  slidesPerView: 1,
+  simulateTouch: false,
+  autoHeight: true,
+  pagination: {
+    el: '.swiper-pagination-nested-3',
+    clickable: true,
+    bulletClass: 'ui-element',
+    bulletActiveClass: 'active',
+    renderBullet: function(index, className) {
+      return `<span class="${className} ${className}-${index + 1}"></span>`;
+    }
+  },
+  navigation: {
+    nextEl: '.swiper-nested-next',
+    prevEl: '.swiper-nested-prev'
   }
 });
 

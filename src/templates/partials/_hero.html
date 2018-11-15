@@ -3,14 +3,24 @@
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8">
         <h2 class="hero-title text-center">Чем мы сможем вам помочь?</h2>
+        {% if title == 'Search page' %}
+        <div class="input-group">
+          <input id="inputSearch" type="text" class="form-control input-search" placeholder="Напишите здесь свой вопрос…" />
+          <div class="input-group-append">
+            <button class="btn btn-info" type="button">{{mixins.icon('glass')}}</button>
+          </div>
+        </div>
+        {% else %}
         <form action="#">
           <div class="input-group">
-            <input id="inputSearch" type="text" class="form-control input-search" placeholder="Напишите здесь свой вопрос…"/>
+            <input id="inputSearch" type="text" class="form-control input-search" placeholder="Напишите здесь свой вопрос…" />
             <div class="input-group-append">
               <button class="btn btn-info" type="submit">{{mixins.icon('glass')}}</button>
             </div>
           </div>
         </form>
+
+        {% endif %}
       </div>
     </div>
   </div>

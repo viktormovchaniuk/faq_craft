@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-close" viewBox="0 0 48 48">
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg"><symbol id="icon-arrow" viewBox="0 0 27 16">
+    <path d="M18.885.24a.803.803 0 0 0-1.147 0 .81.81 0 0 0 0 1.136l5.815 5.815H.803A.799.799 0 0 0 0 7.994c0 .448.356.815.803.815h22.75l-5.815 5.804a.823.823 0 0 0 0 1.146c.32.321.837.321 1.147 0l7.191-7.191a.79.79 0 0 0 0-1.135L18.885.24z" fill-rule="nonzero"/>
+</symbol><symbol id="icon-close" viewBox="0 0 48 48">
     <title>
         C1D840FE-FEC8-49CB-A7AE-4723ECACDA94
     </title>

@@ -28,18 +28,16 @@
         <div class="row justify-content-center">
           <div class="col-12 col-lg-8">
             <h2 class="hero-title text-center">Чем мы сможем вам помочь?</h2>
-            <form action="#">
-              <div class="input-group">
-                <input id="inputSearch" type="text" class="form-control input-search" placeholder="Напишите здесь свой вопрос…" />
-                <div class="input-group-append">
-                  <button class="btn btn-info" type="submit">
-                    <svg class="icon icon-glass">
-                      <use xlink:href="img/sprite.svg#icon-glass"></use>
-                    </svg>
-                  </button>
-                </div>
+            <div class="input-group">
+              <input id="inputSearch" type="text" class="form-control input-search" placeholder="Напишите здесь свой вопрос…" />
+              <div class="input-group-append">
+                <button class="btn btn-info" type="button">
+                  <svg class="icon icon-glass">
+                    <use xlink:href="img/sprite.svg#icon-glass"></use>
+                  </svg>
+                </button>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -114,9 +112,10 @@
             <div class="modal-body mb-5">
               <div class="form-group">
                 <label for="form-select">Платформа</label>
-                <select class="form-control" id="form-select">
-                  <option>Android</option>
-                  <option>iOS</option>
+                <select class="form-control modal-select" id="form-select">
+                  <option class="modal-select-item" value="" disabled selected hidden>Select</option>
+                  <option class="modal-select-item" value="android">Android</option>
+                  <option class="modal-select-item" value="ios">iOS</option>
                 </select>
               </div>
               <div class="form-group">

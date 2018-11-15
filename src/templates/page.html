@@ -215,31 +215,232 @@ title: Index page
     <div class="row">
       <div class="col-12">
         <!-- Slider main container -->
-        <div class="swiper-container">
+        <div class="swiper-container swiper-container-h">
           <!-- If we need pagination -->
           <div class="swiper-pagination-ui mb-1 mb-md-5" data-btns="Main Menu, Craft Menu, Inventory Menu, Quest Menu"></div>
           <!-- Additional required wrapper -->
-          <div class="
-            swiper-wrapper">
+          <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
-              <div class="ui-slide" style="background: url('../img/bg.jpg') no-repeat center center / cover">
-
+              <div class="ui-slide">
+                <img src="img/slide-1.jpg" alt="slide-1">
+                <div class="swiper-pagination swiper-pagination-nested swiper-pagination-nested-1"></div>
+                <div class="swiper-container swiper-container-nested swiper-container-nested-1">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Джойстик</div>
+                        <p class="tip-slide-text">Управляй своим героем на островах и в пещерах</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Хранилище ценностей Внутриигрового Магазина</div>
+                        <p class="tip-slide-text">Забирай выигранные и купленные предметы и инвентарь для дальнейшего
+                          использования в игре</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Меню Квестов</div>
+                        <p class="tip-slide-text">Следи за выполнением квестов, сохраняй и читай подсказки в дневнике</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Меню Мастерской</div>
+                        <p class="tip-slide-text">Создавай предметы инвентаря и оружие в своей личной мастерской</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Меню Инвентаря</div>
+                        <p class="tip-slide-text">Все что ты собираешь, создаешь или находишь в сундуках размещается
+                          в
+                          твоем рюкзаке</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Кнопка Подбора и Взаимодействия</div>
+                        <p class="tip-slide-text">Собирай ресурсы и ценности </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Кнопка Атаки</div>
+                        <p class="tip-slide-text">Атакуй врагов и охоться кликая или зажимая кнопку</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Кнопка Восстановления Здоровья</div>
+                        <p class="tip-slide-text">Лечись во время боя героя, для этого добавь туда пищу</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Автоматическое Собирание Ресурсов</div>
+                        <p class="tip-slide-text">Используй, если нужно собирать все то, что видишь на островах.
+                          Когда
+                          находишься на корабле
+                          эта кнопка отвечает за строительство</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Миникарта</div>
+                        <p class="tip-slide-text">Отслеживай ключевые места на территориях</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Меню Настроек</div>
+                        <p class="tip-slide-text">Изменяй настройки в игре, узнай свой ID</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Жизненные показатели</div>
+                        <p class="tip-slide-text">Внимательно следи за жизненными показателями героя, не забывай есть
+                          и
+                          пить, чтобы не умереть</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-btns-wrap">
+                    <div class="swiper-nested-btn swiper-nested-prev">{{mixins.icon('arrow')}} Предыдущая</div>
+                    <div class="swiper-nested-btn swiper-nested-next">Следующая {{mixins.icon('arrow')}}</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="ui-slide" style="background: url('../img/bg.jpg') no-repeat center center / cover">
-
+              <div class="ui-slide">
+                <img src="img/slide-2.jpg" alt="slide-2">
+                <div class="swiper-pagination swiper-pagination-nested swiper-pagination-nested-2"></div>
+                <div class="swiper-container swiper-container-nested swiper-container-nested-2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Экипировка</div>
+                        <p class="tip-slide-text">Для использования чего нибудь из рюкзака или карманов, просто
+                          перетащи предмет в желаемый
+                          слот или нажми кнопку “Экипировать”</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Кнопка Использования</div>
+                        <p class="tip-slide-text">Быстро используй предметы или пищу по назначению</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Кнопка Разделения</div>
+                        <p class="tip-slide-text">Разделяй на равные части ресурсы и предметы в инвентаре</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Кнопка Удаления</div>
+                        <p class="tip-slide-text">Удаляй ненужные ресурсы или предметы из инвентаря</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Основные Показатели Героя</div>
+                        <p class="tip-slide-text"> Следи за изменениями уровня основных показателей, в зависимости от
+                          используемой экипировки</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Рюкзак</div>
+                        <p class="tip-slide-text">Добавь в слот рюкзак чтобы увеличить место для транспортировки
+                          ценного груза. Чем лучше
+                          рюкзак - тем больше места</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Слот для Быстрого Лечения</div>
+                        <p class="tip-slide-text">Положи туда что-то съедобное чтобы не умереть в бою. Чем ценней пища
+                          - тем лучше она лечит</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Слот для Оружия</div>
+                        <p class="tip-slide-text">Перетащи из инвентаря то оружие, которое хочешь использовать в бою
+                          или на охоте</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Слоты для одежды и брони</div>
+                        <!-- <p class="tip-slide-text">Используй, если нужно собирать все то, что видишь на островах.
+                          Когда
+                          находишься на корабле
+                          эта кнопка отвечает за строительство</p> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-btns-wrap">
+                    <div class="swiper-nested-btn swiper-nested-prev">{{mixins.icon('arrow')}} Предыдущая</div>
+                    <div class="swiper-nested-btn swiper-nested-next">Следующая {{mixins.icon('arrow')}}</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="ui-slide" style="background: url('../img/bg.jpg') no-repeat center center / cover">
-
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="ui-slide" style="background: url('../img/bg.jpg') no-repeat center center / cover">
-
+              <div class="ui-slide">
+                <img src="img/slide-3.jpg" alt="slide-3">
+                <div class="swiper-pagination swiper-pagination-nested swiper-pagination-nested-3"></div>
+                <div class="swiper-container swiper-container-nested swiper-container-nested-3">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Перечень всего, что ты можешь сделать в мастерской</div>
+                        <p class="tip-slide-text">Просто кликни на изображение необходимого предмета и узнаешь что
+                          нужно для его создания
+                        </p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Краткое описание предмета</div>
+                        <p class="tip-slide-text">Ознакомься с назначением предмета, а также его основными
+                          характеристиками</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Слоты для ресурсов</div>
+                        <p class="tip-slide-text">Отслеживай есть ли у тебя в инвентаре необходимые ресурсы для
+                          создания нужного тебе предмета</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Кнопка Изучения/Создания</div>
+                        <p class="tip-slide-text">Чтобы создать предмет, тебе в начале его нужно изучить, используя
+                          чертежи, а потом жми
+                          “Создать”, если в инвентаре есть все нужные для создания ресурсы</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="tip-slide">
+                        <div class="tip-slide-title">Количество имеющихся у тебя чертежей</div>
+                        <p class="tip-slide-text">Ищи их на побережьях островов</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-btns-wrap">
+                    <div class="swiper-nested-btn swiper-nested-prev">{{mixins.icon('arrow')}} Предыдущая</div>
+                    <div class="swiper-nested-btn swiper-nested-next">Следующая {{mixins.icon('arrow')}}</div>
+                  </div>
+                </div>
               </div>
             </div>
 
