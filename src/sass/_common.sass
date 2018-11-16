@@ -207,7 +207,7 @@ textarea
 .main-content ~ .main-footer
 	margin-top: 96px
 	+r($md)
-		margin-top: 48px
+		margin-top: 0
 
 //feedback
 .feedback
@@ -241,6 +241,10 @@ textarea
 	font-size: 1rem
 
 //sliders
+
+.ui
+	+r($md)
+		display: none
 
 .ui-slide
 	position: relative
@@ -353,9 +357,6 @@ $slide-height: 624
 	left: 0
 	bottom: 0
 	z-index: 10
-	+r($md)
-		display: none
-
 
 .ui-element
 	z-index: 50
@@ -469,7 +470,7 @@ $slide-height: 624
 		border-radius: 0
 		+make-el(274, 58, 726, 553)
 	.ui-element-5
-		+make-el(120, 60, 472, 10)
+		+make-el(230, 58, 474, 12)
 		border-radius: 0
 		
 

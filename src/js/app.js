@@ -13,84 +13,113 @@ import 'bootstrap/js/dist/collapse';
 
 Swiper.use([Navigation, Pagination, EffectCoverflow]);
 
-var swiperUi = new Swiper('.swiper-container-h', {
-  slidesPerView: 1,
-  simulateTouch: false,
-  effect: 'coverflow',
-  pagination: {
-    el: '.swiper-pagination-ui',
-    clickable: true,
-    bulletClass: 'btn-outline-primary',
-    bulletActiveClass: 'active',
-    renderBullet: function(index, className) {
-      var btns = this.pagination.el.dataset.btns.split(',');
-      return (
-        '<button type="button" class="btn mr-0 mr-lg-2 btn-sm mb-2 mb-lg-0 ' +
-        className +
-        '">' +
-        btns[index] +
-        '</button>'
-      );
-    }
-  }
-});
+const breakpoint = window.matchMedia('(max-width:768px)');
 
-var swiperNested1 = new Swiper('.swiper-container-nested-1', {
-  slidesPerView: 1,
-  simulateTouch: false,
-  autoHeight: true,
-  pagination: {
-    el: '.swiper-pagination-nested-1',
-    clickable: true,
-    bulletClass: 'ui-element',
-    bulletActiveClass: 'active',
-    renderBullet: function(index, className) {
-      return `<span class="${className} ${className}-${index + 1}"></span>`;
-    }
-  },
-  navigation: {
-    nextEl: '.swiper-nested-next',
-    prevEl: '.swiper-nested-prev'
-  }
-});
+let swiperUi, swiperNested1, swiperNested2, swiperNested3;
 
-var swiperNested2 = new Swiper('.swiper-container-nested-2', {
-  slidesPerView: 1,
-  simulateTouch: false,
-  autoHeight: true,
-  pagination: {
-    el: '.swiper-pagination-nested-2',
-    clickable: true,
-    bulletClass: 'ui-element',
-    bulletActiveClass: 'active',
-    renderBullet: function(index, className) {
-      return `<span class="${className} ${className}-${index + 1}"></span>`;
+const breakpointChecker = function() {
+  if (breakpoint.matches === true) {
+    if (
+      swiperUi !== undefined &&
+      swiperNested1 !== undefined &&
+      swiperNested2 !== undefined &&
+      swiperNested3 !== undefined
+    ) {
+      swiperUi.destroy(true, true);
+      swiperNested1.destroy(true, true);
+      swiperNested2.destroy(true, true);
+      swiperNested3.destroy(true, true);
+      return;
     }
-  },
-  navigation: {
-    nextEl: '.swiper-nested-next',
-    prevEl: '.swiper-nested-prev'
+  } else if (breakpoint.matches === false) {
+    return enableSwiper();
   }
-});
+};
 
-var swiperNested3 = new Swiper('.swiper-container-nested-3', {
-  slidesPerView: 1,
-  simulateTouch: false,
-  autoHeight: true,
-  pagination: {
-    el: '.swiper-pagination-nested-3',
-    clickable: true,
-    bulletClass: 'ui-element',
-    bulletActiveClass: 'active',
-    renderBullet: function(index, className) {
-      return `<span class="${className} ${className}-${index + 1}"></span>`;
+const enableSwiper = function() {
+  swiperUi = new Swiper('.swiper-container-h', {
+    slidesPerView: 1,
+    simulateTouch: false,
+    effect: 'coverflow',
+    pagination: {
+      el: '.swiper-pagination-ui',
+      clickable: true,
+      bulletClass: 'btn-outline-primary',
+      bulletActiveClass: 'active',
+      renderBullet: function(index, className) {
+        var btns = this.pagination.el.dataset.btns.split(',');
+        return (
+          '<button type="button" class="btn mr-0 mr-lg-2 btn-sm mb-2 mb-lg-0 ' +
+          className +
+          '">' +
+          btns[index] +
+          '</button>'
+        );
+      }
     }
-  },
-  navigation: {
-    nextEl: '.swiper-nested-next',
-    prevEl: '.swiper-nested-prev'
-  }
-});
+  });
+
+  swiperNested1 = new Swiper('.swiper-container-nested-1', {
+    slidesPerView: 1,
+    simulateTouch: false,
+    autoHeight: true,
+    pagination: {
+      el: '.swiper-pagination-nested-1',
+      clickable: true,
+      bulletClass: 'ui-element',
+      bulletActiveClass: 'active',
+      renderBullet: function(index, className) {
+        return `<span class="${className} ${className}-${index + 1}"></span>`;
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-nested-next',
+      prevEl: '.swiper-nested-prev'
+    }
+  });
+
+  swiperNested2 = new Swiper('.swiper-container-nested-2', {
+    slidesPerView: 1,
+    simulateTouch: false,
+    autoHeight: true,
+    pagination: {
+      el: '.swiper-pagination-nested-2',
+      clickable: true,
+      bulletClass: 'ui-element',
+      bulletActiveClass: 'active',
+      renderBullet: function(index, className) {
+        return `<span class="${className} ${className}-${index + 1}"></span>`;
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-nested-next',
+      prevEl: '.swiper-nested-prev'
+    }
+  });
+
+  swiperNested3 = new Swiper('.swiper-container-nested-3', {
+    slidesPerView: 1,
+    simulateTouch: false,
+    autoHeight: true,
+    pagination: {
+      el: '.swiper-pagination-nested-3',
+      clickable: true,
+      bulletClass: 'ui-element',
+      bulletActiveClass: 'active',
+      renderBullet: function(index, className) {
+        return `<span class="${className} ${className}-${index + 1}"></span>`;
+      }
+    },
+    navigation: {
+      nextEl: '.swiper-nested-next',
+      prevEl: '.swiper-nested-prev'
+    }
+  });
+};
+
+breakpoint.addListener(breakpointChecker);
+
+breakpointChecker();
 
 $('#mainModal').on('shown.bs.modal', function() {
   $('#modalBtn').trigger('focus');
