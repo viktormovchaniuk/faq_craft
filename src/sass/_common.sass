@@ -176,7 +176,11 @@ textarea
 
 //hero
 .hero
-	background: url('../img/bg.jpg') no-repeat center center $light / cover
+	background-image: url('../img/bg.jpg')
+	background-repeat: no-repeat
+	background-position: center center 
+	background-color: $light
+	background-size: cover
 	padding-top: 186px
 	padding-bottom: 186px
 	position: relative
@@ -352,11 +356,6 @@ $slide-height: 624
 	+r($md)
 		display: none
 
-@keyframes shadowpulse
-	0%
-		box-shadow: 0 0 0 0px rgba($yellow, 1)
-	100%
-		box-shadow: 0 0 0 25px rgba($yellow, 0)
 
 .ui-element
 	z-index: 50
@@ -366,19 +365,18 @@ $slide-height: 624
 	border-radius: 50%
 	width: 30px
 	height: 30px
-	opacity: .3
-	filter: blur(7px)
-	background-color: $yellow
-	// box-shadow: 0 0 0 25px rgba($yellow, 1)
+	background-color: rgba($dark, .25)
+	border: 3px solid rgba(#1b2121, .5)
 	cursor: pointer
 	right: 0
 	bottom: 0
+	transition: $transition-base
 	
 @keyframes bounce
 	0% 
 		transform: scale(0)
 	50% 
-		transform: scale(1.2)
+		transform: scale(1.1)
 	90% 
 		transform: scale(.9)
 	100% 
@@ -390,8 +388,9 @@ $slide-height: 624
 	outline: none
 
 .ui-element.active
-	// animation: bounce .4s, shadowpulse 2s infinite
-	opacity: .8
+	border-color: $yellow
+	background-color: rgba($yellow, .35)
+	animation: bounce .4s
 
 =make-el($width, $height, $left, $top)
 	width: (($width/$slide-width) * 100) + %
@@ -402,15 +401,15 @@ $slide-height: 624
 
 .swiper-pagination-nested-1
 	.ui-element-1
-		+make-el(200, 200, 45, 390)
+		+make-el(170, 170, 60, 403)
 	.ui-element-2
-		+make-el(80, 80, 375, 529)
+		+make-el(78, 78, 378, 529)
 	.ui-element-3
-		+make-el(80, 80, 468, 529)
+		+make-el(78, 78, 471, 529)
 	.ui-element-4
-		+make-el(80, 80, 561, 529)
+		+make-el(78, 78, 563, 529)
 	.ui-element-5
-		+make-el(80, 80, 654, 529)
+		+make-el(78, 78, 655, 529)
 	.ui-element-6
 		+make-el(105, 105, 833, 504)
 	.ui-element-7
@@ -418,59 +417,60 @@ $slide-height: 624
 	.ui-element-8
 		+make-el(105, 105, 989, 346)
 	.ui-element-9
-		+make-el(155, 155, 939, 455)
+		+make-el(155, 155, 941, 455)
 	.ui-element-10
-		+make-el(245, 245, 843, 23)
+		+make-el(240, 240, 846, 26)
 	.ui-element-11
-		+make-el(70, 70, 1028, 10)
+		+make-el(78, 78, 1026, 7)
 	.ui-element-12
-		+make-el(70, 70, 518, 15)
+		+make-el(70, 70, 519, 14)
 
 		
 .swiper-pagination-nested-2
 	.ui-element-1
-		+make-el(150, 70, 110, 547)
-		border-radius: 10px
+		+make-el(144, 56, 110, 554)
+		border-radius: 0
 	.ui-element-2
-		+make-el(150, 70, 255, 547)
-		border-radius: 10px
+		+make-el(144, 56, 259, 554)
+		border-radius: 0
 	.ui-element-3
-		+make-el(150, 70, 405, 547)
-		border-radius: 10px
+		+make-el(144, 56, 408, 554)
+		border-radius: 0
 	.ui-element-4
-		+make-el(70, 70, 548, 548)
+		+make-el(56, 56, 554, 554)
+		border-radius: 0
 	.ui-element-5
-		border-radius: 10px
-		+make-el(370, 65, 630, 548)
+		border-radius: 0
+		+make-el(372, 48, 630, 557)
 	.ui-element-6
-		border-radius: 10px
+		border-radius: 0
 		+make-el(92, 92, 632, 389)
 	.ui-element-7
-		border-radius: 10px
+		border-radius: 0
 		+make-el(92, 92, 632, 295)
 	.ui-element-8
-		border-radius: 10px
+		border-radius: 0
 		+make-el(92, 92, 632, 202)
 	.ui-element-9
-		border-radius: 10px
-		+make-el(92, 385, 910, 150)
+		border-radius: 0
+		+make-el(92, 370, 910, 158)
 
 .swiper-pagination-nested-3
 	.ui-element-1
-		border-radius: 10px
-		+make-el(140, 145, 105, 70)
+		border-radius: 0
+		+make-el(112, 132, 120, 78)
 	.ui-element-2
-		border-radius: 10px
-		+make-el(300, 340, 715, 10)
+		border-radius: 0
+		+make-el(276, 335, 726, 10)
 	.ui-element-3
-		border-radius: 10px
-		+make-el(290, 100, 713, 353)
+		border-radius: 0
+		+make-el(278, 92, 724, 358)
 	.ui-element-4
-		border-radius: 10px
-		+make-el(290, 70, 715, 550)
+		border-radius: 0
+		+make-el(274, 58, 726, 553)
 	.ui-element-5
-		+make-el(120, 60, 465, 10)
-		border-radius: 10px
+		+make-el(120, 60, 472, 10)
+		border-radius: 0
 		
 
 	
@@ -678,12 +678,6 @@ $slide-height: 624
 
 //modal
 .modal
-	&-select
-		background-color: $light
-	&-select:focus
-		background-color: $light
-	&-select-item:hover
-		// background-color: #d3d3d3
 	&-dialog
 		+rmin($sm)
 			margin-top: 83px
@@ -802,9 +796,49 @@ $slide-height: 624
 
 .tooltip.show
 	opacity: 1
-	
 
-	
+.select
+	position: relative
+	&-hidden
+		display: none
+		visibility: hidden
+	&-options
+		display: none
+		position: absolute
+		top: 100%
+		right: 0
+		left: 0
+		padding: 0
+		margin: 0
+		list-style: none
+		li[rel="hide"]
+			display: none
+		li
+			transition: $transition-base
+		li:hover
+			background-color: #d3d3d3
+			border-color: #d3d3d3
+	.form-control
+		background-color: $light
+		cursor: pointer
+	&>.form-control
+		position: relative
+	&>.form-control:after
+		position: absolute
+		content: ''
+		right: 14px
+		top: 0
+		bottom: 0
+		margin: auto
+		width: 0
+		height: 0
+		border-left: 8px solid transparent
+		border-right: 8px solid transparent
+		border-top: 8px solid $dark
+		transition: $transition-base
+	&>.form-control.active:after
+		transform: rotate(180deg)
+
 
 
 		
